@@ -1,3 +1,7 @@
+# datepik
+
+`@rndsqr/datepik` is a simple date picker. Written using @reach/combobox, date-fns, etc. Designed to be used easily in a modern React environment, especially inside formik.
+
 [![NPM Version](https://img.shields.io/npm/v/@rndsqr/datepik.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
 [![NPM Downloads](https://img.shields.io/npm/dm/@rndsqr/datepik.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/@rndsqr/datepik)](https://bundlephobia.com/result?p=@rndsqr/datepik)
