@@ -1,8 +1,8 @@
-[![NPM Version](https://img.shields.io/npm/v/@mikecousins/react-pdf.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
-[![NPM Downloads](https://img.shields.io/npm/dm/@mikecousins/react-pdf.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
-[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@material-ui/core)](https://bundlephobia.com/result?p=@rndsqr/datepik)
-[![Dependency Status](https://david-dm.org/mikecousins/react-pdf-js.svg)](https://david-dm.org/rndsqr/datepik)
-[![devDependency Status](https://david-dm.org/mikecousins/react-pdf-js/dev-status.svg)](https://david-dm.org/rndsqr/datepik#info=devDependencies)
+[![NPM Version](https://img.shields.io/npm/v/@rndsqr/datepik.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
+[![NPM Downloads](https://img.shields.io/npm/dm/@rndsqr/datepik.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@rndsqr/datepik)](https://bundlephobia.com/result?p=@rndsqr/datepik)
+[![Dependency Status](https://david-dm.org/rndsqur/datepik.svg)](https://david-dm.org/rndsqr/datepik)
+[![devDependency Status](https://david-dm.org/rndsqr/datepik/dev-status.svg)](https://david-dm.org/rndsqr/datepik#info=devDependencies)
 
 # TSDX React User Guide
 
