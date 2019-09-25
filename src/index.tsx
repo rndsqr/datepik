@@ -1,13 +1,14 @@
 import React from 'react';
 import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption } from '@reach/combobox';
+import '@reach/combobox/styles.css';
 
 export const Datepik = () => {
   return (
     <div>
       <Combobox>
-        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxInput placeholder="Month" />
         <ComboboxPopover>
-          <ComboboxList aria-labelledby="demo">
+          <ComboboxList>
             <ComboboxOption value="Jan" />
             <ComboboxOption value="Feb" />
             <ComboboxOption value="Mar" />
@@ -17,9 +18,9 @@ export const Datepik = () => {
         </ComboboxPopover>
       </Combobox>
       <Combobox>
-        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxInput placeholder="Day" />
         <ComboboxPopover>
-          <ComboboxList aria-labelledby="demo">
+          <ComboboxList>
             <ComboboxOption value="1" />
             <ComboboxOption value="2" />
             <ComboboxOption value="3" />
@@ -29,9 +30,9 @@ export const Datepik = () => {
         </ComboboxPopover>
       </Combobox>
       <Combobox>
-        <ComboboxInput aria-labelledby="demo" />
+        <ComboboxInput placeholder="Year" />
         <ComboboxPopover>
-          <ComboboxList aria-labelledby="demo">
+          <ComboboxList>
             <ComboboxOption value="1901" />
             <ComboboxOption value="1902" />
             <ComboboxOption value="1903" />
