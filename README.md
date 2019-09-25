@@ -1,3 +1,7 @@
+[![NPM Version](https://img.shields.io/npm/v/@mikecousins/react-pdf.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
+[![NPM Downloads](https://img.shields.io/npm/dm/@mikecousins/react-pdf.svg?style=flat-square)](https://www.npmjs.com/package/@rndsqr/datepik)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@material-ui/core)](https://bundlephobia.com/result?p=@rndsqr/datepik)
+
 # TSDX React User Guide
 
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
