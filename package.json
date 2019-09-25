@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/reach__combobox": "^0.1.0",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "husky": "^3.0.5",
@@ -37,5 +38,8 @@
     "tsdx": "^0.9.2",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@reach/combobox": "^0.1.1"
   }
 }
