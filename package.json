@@ -11,7 +11,8 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom",
-    "lint": "tsdx lint",
+    "test-coverage": "tsdx test --env=jsdom --coverage",
+    "lint": "tsdx lint src",
     "netlify": "yarn && yarn build && cd example && yarn && yarn build"
   },
   "peerDependencies": {
@@ -29,6 +30,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.1.4",
     "@types/jest": "^24.0.18",
     "@types/reach__combobox": "^0.1.0",
     "@types/react": "^16.9.3",
@@ -42,8 +44,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@reach/combobox": "^0.1.1",
-    "date-fns": "^2.3.0"
+    "@reach/combobox": "0.1.1",
+    "date-fns": "2.3.0"
   },
   "jest": {
     "moduleNameMapper": {
