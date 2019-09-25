@@ -31,7 +31,6 @@ export const Datepik = ({ value, onChange }: DatepikProps) => {
 
   // react to new values passed in
   useEffect(() => {
-    console.log('new value', value);
     if (value) {
       setDay(value.getDate().toString());
       setMonth(months[value.getMonth()]);
@@ -47,8 +46,6 @@ export const Datepik = ({ value, onChange }: DatepikProps) => {
     }
 
     if (isValid(new Date(Number.parseInt(year, 10), months.findIndex(m => m === month), Number.parseInt(day, 10)))) {
-      console.log('setting new value', new Date(Number.parseInt(year, 10), months.findIndex(m => m === month), Number.parseInt(day, 10)));
-      console.log('raw values', year, month, months.findIndex(m => m === month), day);
       onChange(new Date(Number.parseInt(year, 10), months.findIndex(m => m === month), Number.parseInt(day, 10)));
       if (error) {
         setError(false);
