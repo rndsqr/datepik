@@ -1,12 +1,14 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { Datepik } from '../.';
 
 const App = () => {
+  const [date, setDate] = React.useState<Date>();
   return (
     <div>
-      <Thing />
+      <Datepik value={date} onChange={setDate} />
+      {date && date.toString()}
     </div>
   );
 };
