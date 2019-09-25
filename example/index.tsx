@@ -4,9 +4,11 @@ import * as ReactDOM from 'react-dom';
 import { Datepik } from '../.';
 
 const App = () => {
+  const [date, setDate] = React.useState<Date>();
   return (
     <div>
-      <Datepik />
+      <Datepik value={date} onChange={setDate} />
+      {date && date.toString()}
     </div>
   );
 };
