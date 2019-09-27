@@ -3,6 +3,7 @@ import { isValid } from 'date-fns';
 import MonthSelect from './MonthSelect';
 import DaySelect from './DaySelect';
 import YearSelect from './YearSelect';
+import { getDaysInMonth } from 'date-fns/esm';
 
 type DatepikProps = {
   value?: Date;
@@ -11,12 +12,11 @@ type DatepikProps = {
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-
 export const Datepik = ({ value, onChange }: DatepikProps) => {
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<string>();
 
   // react to new values passed in
   useEffect(() => {
@@ -29,18 +29,35 @@ export const Datepik = ({ value, onChange }: DatepikProps) => {
 
   // react to input changes
   useEffect(() => {
-    if (!Number.parseInt(year) || !Number.parseInt(day) || months.findIndex(m => m === month) === -1) {
-      setError(true);
+    // parse the inputs into numbers
+    const parsedYear = Number.parseInt(year, 10);
+    const parsedDay = Number.parseInt(day, 10);
+    const parsedMonth = months.findIndex(m => m === month);
+
+    // check if the inputs are at least valid numbers
+    if (!parsedYear || !parsedDay || parsedMonth === -1) {
+      setError('Invalid input');
       return;
     }
 
-    if (isValid(new Date(Number.parseInt(year, 10), months.findIndex(m => m === month), Number.parseInt(day, 10)))) {
-      onChange(new Date(Number.parseInt(year, 10), months.findIndex(m => m === month), Number.parseInt(day, 10)));
-      if (error) {
-        setError(false);
-      }
-    } else {
-      setError(true);
+    const newDate = new Date(parsedYear, parsedMonth, parsedDay);
+
+    // check if the date is valid
+    if (!isValid(newDate)) {
+      setError('Invalid date');
+      return;
+    };
+
+    // check if we have an allowable number of days in the current month
+    if (parsedDay > getDaysInMonth(new Date(parsedYear, parsedMonth))) {
+      setError('Invalid day for given month/year');
+      return;
+    }
+
+    // call our callback
+    onChange(newDate);
+    if (error) {
+      setError(undefined);
     }
   }, [day, month, year]);
 
@@ -50,7 +67,7 @@ export const Datepik = ({ value, onChange }: DatepikProps) => {
       <DaySelect value={day} onChange={setDay} />
       <YearSelect value={year} onChange={setYear} />
       <br />
-      {error && <span>Error</span>}
+      {error && <span>{error}</span>}
     </div> 
   );
 };
