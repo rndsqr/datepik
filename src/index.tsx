@@ -1,75 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { isValid } from 'date-fns';
-import MonthSelect from './MonthSelect';
-import DaySelect from './DaySelect';
-import YearSelect from './YearSelect';
-import { getDaysInMonth } from 'date-fns/esm';
+import React from 'react';
+import WindowSize from '@reach/window-size';
+import MobileView from './MobileView';
+import DesktopView from './DesktopView';
+
 
 type DatepikProps = {
   value?: Date;
   onChange: (value: Date) => void;
 };
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-export const Datepik = ({ value, onChange }: DatepikProps) => {
-  const [day, setDay] = useState('');
-  const [month, setMonth] = useState('');
-  const [year, setYear] = useState('');
-  const [error, setError] = useState<string>();
-
-  // react to new values passed in
-  useEffect(() => {
-    if (value) {
-      setDay(value.getDate().toString());
-      setMonth(months[value.getMonth()]);
-      setYear(value.getFullYear().toString());
+export const Datepik = ({ value, onChange }: DatepikProps) => (
+  <WindowSize>
+    {(size) => size.width > 800 ?
+      <DesktopView value={value} onChange={onChange} /> : 
+      <MobileView value={value} onChange={onChange} />
     }
-  }, [value]);
-
-  // react to input changes
-  useEffect(() => {
-    // parse the inputs into numbers
-    const parsedYear = Number.parseInt(year, 10);
-    const parsedDay = Number.parseInt(day, 10);
-    const parsedMonth = months.findIndex(m => m === month);
-
-    // check if the inputs are at least valid numbers
-    if (!parsedYear || !parsedDay || parsedMonth === -1) {
-      setError('Invalid input');
-      return;
-    }
-
-    const newDate = new Date(parsedYear, parsedMonth, parsedDay);
-
-    // check if the date is valid
-    if (!isValid(newDate)) {
-      setError('Invalid date');
-      return;
-    };
-
-    // check if we have an allowable number of days in the current month
-    if (parsedDay > getDaysInMonth(new Date(parsedYear, parsedMonth))) {
-      setError('Invalid day for given month/year');
-      return;
-    }
-
-    // call our callback
-    onChange(newDate);
-    if (error) {
-      setError(undefined);
-    }
-  }, [day, month, year]);
-
-  return (
-    <div>
-      <MonthSelect value={month} onChange={setMonth} />
-      <DaySelect value={day} onChange={setDay} />
-      <YearSelect value={year} onChange={setYear} />
-      <br />
-      {error && <span>{error}</span>}
-    </div> 
-  );
-};
+  </WindowSize>
+);
 
 export default Datepik;

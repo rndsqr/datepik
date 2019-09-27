@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": "github:rndsqr/datepik",
   "bugs": {
-    "url" : "https://github.com/rndsqr/datepik/issues"
+    "url": "https://github.com/rndsqr/datepik/issues"
   },
   "author": {
     "name": "Mike Cousins",
@@ -60,6 +60,7 @@
   "devDependencies": {
     "@testing-library/react": "^9.2.0",
     "@types/jest": "^24.0.18",
+    "@types/reach__window-size": "^0.1.0",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "husky": "^3.0.5",
@@ -71,8 +72,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "date-fns": "2.3.0",
-    "downshift": "3.3.4"
+    "@reach/window-size": "^0.1.4",
+    "date-fns": "2.3.0"
   },
   "jest": {
     "moduleNameMapper": {
