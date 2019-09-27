@@ -8,6 +8,7 @@ type Props = {
 
 const Select = ({ values, value, onChange }: Props) => (
   <select value={value} onChange={e => onChange(e.target.value)}>
+    <option></option>
     {values.map(value => <option key={value}>{value}</option>)}
   </select>
 );
