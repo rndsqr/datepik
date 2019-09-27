@@ -60,7 +60,6 @@
   "devDependencies": {
     "@testing-library/react": "^9.2.0",
     "@types/jest": "^24.0.18",
-    "@types/reach__combobox": "^0.1.0",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "husky": "^3.0.5",
@@ -72,8 +71,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@reach/combobox": "0.1.1",
-    "date-fns": "2.3.0"
+    "date-fns": "2.3.0",
+    "downshift": "3.3.4"
   },
   "jest": {
     "moduleNameMapper": {
