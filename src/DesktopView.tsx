@@ -66,6 +66,7 @@ const DesktopView = ({ value, onChange }: Props) => {
       <MonthSelect value={month} onChange={setMonth} />
       <DaySelect value={day} onChange={setDay} />
       <YearSelect value={year} onChange={setYear} />
+      {error && <div>{error}</div>}
     </div>
   );
 };
