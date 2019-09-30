@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@reach/window-size": "^0.1.4",
-    "date-fns": "2.3.0"
+    "date-fns": "2.4.1"
   },
   "jest": {
     "moduleNameMapper": {
