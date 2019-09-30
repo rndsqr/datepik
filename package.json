@@ -1,6 +1,6 @@
 {
   "name": "@rndsqr/datepik",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/index.js",
   "module": "dist/datepik.esm.js",
   "typings": "dist/index.d.ts",
@@ -44,7 +44,11 @@
     "netlify": "yarn && yarn build && cd example && yarn && yarn build"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.2"
+    "@reach/window-size": "^0.1.4",
+    "date-fns": "^2.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1"
   },
   "husky": {
     "hooks": {
@@ -64,11 +68,13 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@reach/window-size": "^0.1.4",
     "@testing-library/react": "^9.2.0",
     "@types/jest": "^24.0.18",
     "@types/reach__window-size": "^0.1.0",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
+    "date-fns": "2.4.1",
     "husky": "^3.0.7",
     "identity-obj-proxy": "^3.0.0",
     "lint-staged": "9.4.0",
@@ -77,10 +83,6 @@
     "tsdx": "^0.9.2",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
-  },
-  "dependencies": {
-    "@reach/window-size": "0.1.4",
-    "date-fns": "2.4.1"
   },
   "jest": {
     "moduleNameMapper": {
