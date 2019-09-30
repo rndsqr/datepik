@@ -1,8 +1,11 @@
 import React from 'react';
 import Select from './Select';
 
-const range = (start: number, stop: number, step: number) => Array.from({ length: (stop - start) / step + 1}, (_, i) => (start + (i * step)).toString());
-const currentYear = (new Date()).getFullYear();
+const range = (start: number, stop: number, step: number) =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) =>
+    (start + i * step).toString()
+  );
+const currentYear = new Date().getFullYear();
 const years = range(currentYear, currentYear - 100, -1);
 
 type Props = {
@@ -11,7 +14,12 @@ type Props = {
 };
 
 const YearSelect = ({ value, onChange }: Props) => (
-  <Select values={years} value={value} onChange={onChange} />
+  <Select
+    values={years}
+    value={value}
+    onChange={onChange}
+    className="date-pik-desktop-year"
+  />
 );
 
 export default YearSelect;

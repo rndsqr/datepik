@@ -12,7 +12,12 @@ const MobileView = ({ value, onChange }: Props) => {
     parsedValue = format(value, 'yyyy-MM-dd');
   }
   return (
-    <input type="date" value={parsedValue} onChange={e => onChange(parse(e.target.value, 'yyyy-MM-dd', new Date()))} />
+    <input
+      type="date"
+      value={parsedValue}
+      onChange={e => onChange(parse(e.target.value, 'yyyy-MM-dd', new Date()))}
+      className="date-pik-mobile"
+    />
   );
 };
 

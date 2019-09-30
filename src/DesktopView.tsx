@@ -7,16 +7,28 @@ import YearSelect from './YearSelect';
 type Props = {
   value?: Date;
   onChange: (value: Date) => void;
+  onError?: (error: string) => void;
 };
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
 
-const DesktopView = ({ value, onChange }: Props) => {
+const DesktopView = ({ value, onChange, onError }: Props) => {
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
-
-  const [error, setError] = useState<string>();
 
   // react to new values passed in
   useEffect(() => {
@@ -36,7 +48,7 @@ const DesktopView = ({ value, onChange }: Props) => {
 
     // check if the inputs are at least valid numbers
     if (!parsedYear || !parsedDay || parsedMonth === -1) {
-      setError('Invalid input');
+      onError && onError('Invalid input');
       return;
     }
 
@@ -44,29 +56,25 @@ const DesktopView = ({ value, onChange }: Props) => {
 
     // check if the date is valid
     if (!isValid(newDate)) {
-      setError('Invalid date');
+      onError && onError('Invalid date');
       return;
-    };
+    }
 
     // check if we have an allowable number of days in the current month
     if (parsedDay > getDaysInMonth(new Date(parsedYear, parsedMonth))) {
-      setError('Invalid day for given month/year');
+      onError && onError('Invalid day for given month/year');
       return;
     }
 
     // call our callback
     onChange(newDate);
-    if (error) {
-      setError(undefined);
-    }
   }, [day, month, year]);
-  
+
   return (
-    <div>
+    <div className="date-pik-desktop">
       <MonthSelect value={month} onChange={setMonth} />
       <DaySelect value={day} onChange={setDay} />
       <YearSelect value={year} onChange={setYear} />
-      {error && <div>{error}</div>}
     </div>
   );
 };
