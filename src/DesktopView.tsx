@@ -8,6 +8,7 @@ type Props = {
   value?: Date;
   onChange: (value: Date) => void;
   onError?: (error: string) => void;
+  onBlur?: () => void;
 };
 
 const months = [
@@ -25,7 +26,7 @@ const months = [
   'Dec',
 ];
 
-const DesktopView = ({ value, onChange, onError }: Props) => {
+const DesktopView = ({ value, onChange, onError, onBlur }: Props) => {
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
@@ -72,9 +73,9 @@ const DesktopView = ({ value, onChange, onError }: Props) => {
 
   return (
     <div className="date-pik-desktop">
-      <MonthSelect value={month} onChange={setMonth} />
-      <DaySelect value={day} onChange={setDay} />
-      <YearSelect value={year} onChange={setYear} />
+      <MonthSelect value={month} onChange={setMonth} onBlur={onBlur} />
+      <DaySelect value={day} onChange={setDay} onBlur={onBlur} />
+      <YearSelect value={year} onChange={setYear} onBlur={onBlur} />
     </div>
   );
 };

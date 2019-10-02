@@ -11,13 +11,15 @@ const years = range(currentYear, currentYear - 100, -1);
 type Props = {
   value: string;
   onChange: (newValue: string) => void;
+  onBlur?: () => void;
 };
 
-const YearSelect = ({ value, onChange }: Props) => (
+const YearSelect = ({ value, onChange, onBlur }: Props) => (
   <Select
     values={years}
     value={value}
     onChange={onChange}
+    onBlur={onBlur}
     className="date-pik-desktop-year"
   />
 );

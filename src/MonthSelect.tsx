@@ -19,13 +19,15 @@ const months = [
 type Props = {
   value: string;
   onChange: (newValue: string) => void;
+  onBlur?: () => void;
 };
 
-const MonthSelect = ({ value, onChange }: Props) => (
+const MonthSelect = ({ value, onChange, onBlur }: Props) => (
   <Select
     values={months}
     value={value}
     onChange={onChange}
+    onBlur={onBlur}
     className="date-pik-desktop-month"
   />
 );

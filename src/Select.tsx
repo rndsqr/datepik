@@ -4,13 +4,15 @@ type Props = {
   values: string[];
   value: string;
   onChange: (newValue: string) => void;
+  onBlur?: () => void;
   className: string;
 };
 
-const Select = ({ values, value, onChange, className }: Props) => (
+const Select = ({ values, value, onChange,onBlur, className }: Props) => (
   <select
     value={value}
     onChange={e => onChange(e.target.value)}
+    onBlur={onBlur}
     className={className}
   >
     <option></option>
