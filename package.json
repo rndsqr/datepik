@@ -1,6 +1,6 @@
 {
   "name": "@rndsqr/datepik",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "dist/index.js",
   "module": "dist/datepik.esm.js",
   "typings": "dist/index.d.ts",
