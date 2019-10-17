@@ -5,7 +5,7 @@ import DesktopView from './DesktopView';
 
 type DatepikProps = {
   value?: Date;
-  onChange: (value: Date | null) => void;
+  onChange: (value: Date | undefined) => void;
   onError?: (error: string) => void;
   onBlur?: () => void;
 };

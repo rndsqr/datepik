@@ -3,7 +3,7 @@ import { format, parse, isValid } from 'date-fns';
 
 type Props = {
   value?: Date;
-  onChange: (value: Date | null) => void;
+  onChange: (value: Date | undefined) => void;
   onBlur?: () => void;
 };
 
@@ -21,7 +21,7 @@ const MobileView = ({ value, onChange, onBlur }: Props) => {
         if (isValid(newDate)) {
           onChange(newDate);
         } else {
-          onChange(null);
+          onChange(undefined);
         }
       }}
       className="date-pik-mobile"
