@@ -859,19 +859,11 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@reach/component-component@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.3.0.tgz#ccf593e26132cbec0ad92774b80356dcf544d5c5"
-  integrity sha512-E93eOotshNv8dnXtOA/f7fMqGUJFTakBG1zEqmBo6BeLJhgP9t9wQrnkiyoU4HL/ou5LYfou8G4P3wQXbDoFFg==
+"@reach/window-size@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@reach/window-size/-/window-size-0.6.2.tgz#e1af23de96848c89dabe56c1eb7c1a8481fdca47"
+  integrity sha512-Xi6PiCRQnNFNQLB/T1dElHc55ocC1+IrKwEI+FaRZHiIPU2NpEpr9fuRSdXBjXx7R8DZBIKwd2IZ454P3qh6BQ==
   dependencies:
-    prop-types "^15.7.2"
-
-"@reach/window-size@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@reach/window-size/-/window-size-0.3.0.tgz#ff58d92bb117265dbd08bd2ee8afc8d4e7ce418e"
-  integrity sha512-+/ZpDqlxeGILR1zSR63JayGVzsnnvbPmLl42dMdUCxHgnuKwbDLWFq3v4jDCZJZXX1bscKIx32VYLuPTu9KJjg==
-  dependencies:
-    "@reach/component-component" "^0.3.0"
     prop-types "^15.7.2"
 
 "@samverschueren/stream-to-observable@^0.3.0":
