@@ -77,7 +77,7 @@
     "date-fns": "2.8.1",
     "husky": "^3.0.7",
     "identity-obj-proxy": "^3.0.0",
-    "lint-staged": "9.4.2",
+    "lint-staged": "9.5.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "tsdx": "^0.12.1",
