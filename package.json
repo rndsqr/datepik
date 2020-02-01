@@ -44,7 +44,7 @@
     "netlify": "yarn && yarn build && cd example && yarn && yarn build"
   },
   "peerDependencies": {
-    "@reach/window-size": "^0.7.0",
+    "@reach/window-size": "^0.8.0",
     "date-fns": "^2.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
@@ -68,7 +68,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@reach/window-size": "^0.7.0",
+    "@reach/window-size": "^0.8.0",
     "@testing-library/react": "^9.2.0",
     "@types/jest": "^24.0.18",
     "@types/reach__window-size": "^0.1.0",

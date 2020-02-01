@@ -889,10 +889,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@reach/window-size@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@reach/window-size/-/window-size-0.7.0.tgz#7ceaf10f0bf102244f6630c130f6f6dadf514120"
-  integrity sha512-C3rzLn2oV/1BJeGTdcdQWYk06LutuiQq1e/CTsjLULYgWQKCtrg1py9bHjYwTno7nizpnTnn2wrCiCchR/K/DQ==
+"@reach/window-size@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@reach/window-size/-/window-size-0.8.0.tgz#db58dccffd9981837ddedc793f749ce6c0d73d09"
+  integrity sha512-/6x9nOhOvW32K/I0s6N0Z9KX+DK4HGeBvk3EbU8dGsf8vEcMrr/WFe6izqBWk3YYD+ShWtC9afU6L9rE4+Om4g==
   dependencies:
     prop-types "^15.7.2"
 
