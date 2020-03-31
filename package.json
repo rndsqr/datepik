@@ -1,6 +1,6 @@
 {
   "name": "@rndsqr/datepik",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": "dist/index.js",
   "module": "dist/datepik.esm.js",
   "typings": "dist/index.d.ts",
@@ -44,11 +44,11 @@
     "netlify": "yarn && yarn build && cd example && yarn && yarn build"
   },
   "peerDependencies": {
-    "@reach/window-size": "^0.7.0",
-    "date-fns": "^2.4.1",
+    "@reach/window-size": "^0.9.0",
+    "date-fns": "^2.11.1",
     "prop-types": "^15.7.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "husky": {
     "hooks": {
@@ -68,21 +68,21 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@reach/window-size": "^0.7.0",
-    "@testing-library/react": "^9.2.0",
-    "@types/jest": "^24.0.18",
-    "@types/reach__window-size": "^0.1.0",
-    "@types/react": "^16.9.3",
-    "@types/react-dom": "^16.9.1",
-    "date-fns": "2.8.1",
-    "husky": "^3.0.7",
-    "identity-obj-proxy": "^3.0.0",
-    "lint-staged": "9.4.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
-    "tsdx": "^0.12.1",
-    "tslib": "^1.10.0",
-    "typescript": "^3.6.3"
+    "@reach/window-size": "0.9.0",
+    "@testing-library/react": "10.0.2",
+    "@types/jest": "25.1.4",
+    "@types/reach__window-size": "0.1.0",
+    "@types/react": "16.9.30",
+    "@types/react-dom": "16.9.5",
+    "date-fns": "2.11.1",
+    "husky": "4.2.3",
+    "identity-obj-proxy": "3.0.0",
+    "lint-staged": "10.1.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "tsdx": "0.13.1",
+    "tslib": "1.11.1",
+    "typescript": "3.8.3"
   },
   "jest": {
     "moduleNameMapper": {
